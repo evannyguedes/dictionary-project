@@ -6,7 +6,7 @@ export default function App() {
       <header className="App-header">
        <h1>Word Universe</h1>
        <a href="#" className="btn btn-primary">
-         Let's Go!
+         Let's go!
        </a>
       </header>
     </div>
