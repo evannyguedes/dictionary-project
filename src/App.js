@@ -4,7 +4,10 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-       Word Universe
+       <h1>Word Universe</h1>
+       <a href="#" className="btn btn-primary">
+         Let's Go!
+       </a>
       </header>
     </div>
   );
