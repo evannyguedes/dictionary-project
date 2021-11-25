@@ -1,4 +1,19 @@
-.Dictionary{
+.title{
+    color: black;
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+}
+
+.search-engine{
+    text-align: center;
+}
+
+.form{
     color: white;
+    display: block;
+    margin: 0 auto;
     text-align: center;
 }

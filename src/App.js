@@ -1,24 +1,23 @@
-import './CSS/App.css';
+import React, { Component } from "react";
+import {BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-router-dom";
+//Pages
+import MainPage from "./MainPage";
+import NotFound from "./NotFound";
 import Dictionary from "./Dictionary";
 
-export default function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h3>Welcome to the</h3>
-       <h1>Word Universe</h1>
-       <a href="https://dictionary.cambridge.org/" className="btn btn-primary">
-         Let's go!
-       </a>
-      </header>
-      <main>
-        <Dictionary />
-        </main>
-      <footer className="bottom">
-        Coded by Évanny Guedes Belarmino
-      </footer>
-    </div>
-  );
-}
+class App extends Component {
+  render(){
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/404" component={NotFound} />
+          <Route exact path="/dictionary" component={Dictionary} />
+          <Redirect to="/404" />
+        </Switch>
+      </Router>
+    );
+  }
+};
 
-
+export default App;
