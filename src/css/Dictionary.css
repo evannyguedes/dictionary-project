@@ -10,5 +10,10 @@
 .form{
     color: white;
     display: block;
-    margin: 0 20px;
+    margin: 20px;
+}
+
+.Evanny{
+    display: block;
+    margin: 0 auto;
 }

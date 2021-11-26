@@ -33,7 +33,7 @@ export default function Dictionary(){
                 </form>
                 <Results results={results} />
             </div>
-            <footer style="color: black;">
+            <footer className="Evanny" style="color: black;">
            Coded by Évanny Guedes Belarmino
        </footer>
        </div>
