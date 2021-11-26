@@ -33,6 +33,10 @@ export default function Dictionary(){
                 </form>
                 <Results results={results} />
             </div>
+            <footer>
+           Coded by Évanny Guedes Belarmino
+       </footer>
        </div>
+       
    )
 }
