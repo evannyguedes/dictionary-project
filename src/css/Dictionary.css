@@ -7,13 +7,8 @@
     width: 300px;
 }
 
-.search-engine{
-    text-align: center;
-}
-
 .form{
     color: white;
     display: block;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 20px;
 }
