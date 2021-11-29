@@ -10,9 +10,9 @@ export default function Synonyms(props){
                     {synonym}
                 </li>
             )            
-            })};
+            })}
             </ul>
-        );
+        )
 
     } else {
         return null;

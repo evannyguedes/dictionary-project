@@ -1,19 +1,73 @@
-.MainPage {
-    background-color: #282c34;
+
+
+  .Universe{
+    position:absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
   
-  .header {
+  .Header {
     
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+  }
+
+  .Welcome {
+    color: white;
+    font-family: 'Gluten', cursive;
+    font-size: calc(10px + 2,5vmin);
+  }
+
+  .Word {
+    font-family: 'Bungee', cursive;
+    color: white;
+    font-size: calc(10px + 7vmin);
+  }
+
+  .Go{
+    color: white;
+    text-decoration: none;
+  }
+
+  .Go:hover{
     color: white;
   }
+
+  .Rocket {
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    
+  }
+
+  .Rocket:hover{
+    animation: none;
+    filter: saturate(350%);
+  }
   
-  .bottom{
-    color: #ffff;
+  .Bottom{
+    color: black;
     text-align: center;
+  }
+
+  @keyframes fly {  
+    to {
+      transform: translateX(-125%);
+    }
+
+    from {
+      transform: translateX(150%);
+    }
+    
   }
