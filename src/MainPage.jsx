@@ -1,7 +1,8 @@
-import "./css/MainPage.css";
+import "./css/MainPage.scss";
 import {Link} from "react-router-dom";
 import Universe from "./media/universe.mp4";
 import Rocket from "./media/rocket.png";
+
 
 export default function MainPage() {
     return (
@@ -12,11 +13,11 @@ export default function MainPage() {
         <header className="Header">
           <h3 className="Welcome">Welcome to the</h3>
           <h1 className="Word">Word Universe</h1>
-          
           <Link to="/dictionary" className="Go">
           <input type="image" alt="rocket" src={Rocket} className="Rocket"/>
           <br/>
-            Let's Go!</Link>
+            Let's Go!
+            </Link>  
         </header>
         <footer className="Bottom">
           Coded by Évanny Guedes Belarmino

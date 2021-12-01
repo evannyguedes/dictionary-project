@@ -1,0 +1,52 @@
+
+.Dictionary{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.Back{
+    animation: none;
+    text-decoration: none;
+}
+
+.title{
+    font-family: 'Bungee', cursive;
+    animation: color 3s infinite linear;
+    text-shadow: 0 0 10px #000a;
+    transition: all 0.5s;
+    font-size: calc(10px + 6vmin);
+    margin: 0 auto;
+    text-align: center;
+    background-color: url("../media/space.jpeg");
+    background-size: cover;
+    padding: 30px 0;
+
+  
+    @keyframes color {
+      @for $c from 0 through 10 {
+        #{$c * 10%} { color: hsl(36 * $c, 75%, 75%); }
+      }
+    }
+  }
+
+.form{
+    color: white;
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+
+.Evanny{
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rocket-buttom{
+    animation:none;
+    width: 30px;
+    filter: saturate(300%);
+}

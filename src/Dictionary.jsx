@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import "./css/Dictionary.css";
+import "./css/Dictionary.scss";
 import axios from "axios";
 import Results from "./Results";
+import Rocket from "./media/rocket.png";
+import {Link} from "react-router-dom";
 
 export default function Dictionary(){
     const [keyword, setKeyword] = useState("");
@@ -25,11 +27,13 @@ export default function Dictionary(){
 
     return (
        <div className="Dictionary">
+           <Link to="/" className="Back">
            <h1 className="title"> Word Universe </h1>
+           </Link>
             <div className="search-engine">
                 <form className="form" onSubmit={search}>
                     <input type="search" autoFocus={true} onChange={handleKeywordChange} placeholder="Enter a word..."/>
-                    <input type="submit" className="btn btn-primary" value="Let's Go!" />
+                    <input type="image" alt="rocket" src={Rocket} className="rocket-buttom"/>
                 </form>
                 <Results results={results} />
             </div>
