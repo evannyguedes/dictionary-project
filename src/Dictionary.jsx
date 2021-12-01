@@ -27,16 +27,18 @@ export default function Dictionary(){
 
     return (
        <div className="Dictionary">
-           <Link to="/" className="Back">
-           <h1 className="title"> Word Universe </h1>
-           </Link>
-            <div className="search-engine">
-                <form className="form" onSubmit={search}>
-                    <input type="search" autoFocus={true} onChange={handleKeywordChange} placeholder="Enter a word..."/>
-                    <input type="image" alt="rocket" src={Rocket} className="rocket-buttom"/>
-                </form>
-                <Results results={results} />
+           <div className="Top">
+                <Link to="/" className="Back">
+                    <h1 className="title" > Word Universe </h1>
+                </Link>
+                <div className="search-engine">
+                    <form className="form" onSubmit={search}>
+                        <input type="search" className="search-engine" autoFocus={true} onChange={handleKeywordChange} placeholder="Enter a word..."/>
+                        <input type="image" alt="rocket" src={Rocket} className="rocket-buttom"/>
+                    </form>
+                </div>
             </div>
+            <Results results={results} />
             <footer className="Evanny" style={{color:"black;"}}>
            Coded by Évanny Guedes Belarmino
        </footer>

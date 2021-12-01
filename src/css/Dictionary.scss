@@ -1,14 +1,20 @@
 
 .Dictionary{
     background-color: black;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .Back{
     animation: none;
     text-decoration: none;
+}
+
+.Top{
+    background-image: url("../media/space.jpeg");
+    background-size: cover;
+    padding: 50px 0 90px 0;
 }
 
 .title{
@@ -18,10 +24,7 @@
     transition: all 0.5s;
     font-size: calc(10px + 6vmin);
     margin: 0 auto;
-    text-align: center;
-    background-color: url("../media/space.jpeg");
-    background-size: cover;
-    padding: 30px 0;
+    float: left; 
 
   
     @keyframes color {
@@ -34,19 +37,28 @@
 .form{
     color: white;
     display: block;
-    margin: 20px;
-    text-align: center;
+    padding-left: 40px;
+    padding-top: 15px;
+    
+}
+
+.search-engine{
+    width: 30vw;
+    float: left;
+}
+
+.rocket-buttom{
+    position:absolute;
+    animation:none;
+    max-width: 2vw;
+    filter: saturate(300%);
 }
 
 .Evanny{
     color: white;
     display: block;
-    margin: 0 auto;
+    margin-top: auto;
     text-align: center;
-}
-
-.rocket-buttom{
-    animation:none;
-    width: 30px;
-    filter: saturate(300%);
+    padding:20px 0;
+    
 }
