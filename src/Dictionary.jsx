@@ -26,6 +26,7 @@ export default function Dictionary(){
     }
 
     return (
+        <body>
        <div className="Dictionary">
            <div className="Top">
                 <Link to="/" className="Back">
@@ -43,6 +44,7 @@ export default function Dictionary(){
            Coded by Évanny Guedes Belarmino
        </footer>
        </div>
+       </body>
        
    )
 }
