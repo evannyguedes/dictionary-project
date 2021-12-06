@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import Photos from "./Photos";
 
 export default function Dictionary(){
-    const [keyword, setKeyword] = useState("earth");
+    const [keyword, setKeyword] = useState("moon");
     const [results, setResults] = useState(null);
     const [loaded, setLoaded] = useState(false);
     const [photos, setPhotos] = useState(null);
@@ -25,11 +25,16 @@ export default function Dictionary(){
     let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
 
-    const apiKeyPexels="563492ad6f91700001000001a056dc5254ea491f9997b38e28da26bd"
+    const apiKeyPexels="563492ad6f91700001000001a056dc5254ea491f9997b38e28da26bd";
     let apiUrlPexels = `https://api.pexels.com/v1/search?query=${keyword}&per_page=8`;
     const headers = {"Authorization": `Bearer ${apiKeyPexels}`};
     axios.get(apiUrlPexels, {headers: headers}).then(handlePexelsResponse);
 
+    }
+
+    function handleSubmit(event){
+        event.preventDefault();
+        search();
     }
 
     function handleKeywordChange(event){
@@ -50,7 +55,7 @@ export default function Dictionary(){
                     <h1 className="title" > Word Universe </h1>
                 </Link>
                 <div className="search-engine">
-                    <form className="form" onSubmit={search}>
+                    <form className="form" onSubmit={handleSubmit}>
                         <input type="search" className="search-engine" autoFocus={true} onChange={handleKeywordChange} placeholder="Enter a word..."/>
                         <input type="image" alt="rocket" src={Rocket} className="rocket-buttom"/>
                     </form>
