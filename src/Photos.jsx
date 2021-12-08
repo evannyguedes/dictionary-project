@@ -5,17 +5,16 @@ export default function Photos(props){
     if(props.photos){
         return (
             <section className="Photos">
-                <div className="row">
-                {props.photos.map(function(photo, index){
-                    return(
-                        <div className="col-6" key={index}>
-                            <a href={photo.src.original} target="_blank" rel="noreferrer">
-                        <img src={photo.src.landscape} alt="photos" className="images" />
-                        </a>
-                        </div>
-                    )
-                })}
-                </div>
+                        <div className="a-lot-photos" >
+                        <img src={props.photos[0].src.landscape} alt="photos" className="first" />
+                        <img src={props.photos[1].src.landscape} alt="photos" className="second" />
+                        <img src={props.photos[2].src.landscape} alt="photos" className="third" />
+                        <img src={props.photos[3].src.landscape} alt="photos" className="fourth" />
+                        <img src={props.photos[4].src.landscape} alt="photos" className="fifth" />
+                        <img src={props.photos[5].src.landscape} alt="photos" className="sixth" />
+                        <img src={props.photos[6].src.landscape} alt="photos" className="seventh" />
+                        <img src={props.photos[7].src.landscape} alt="photos" className="eighth" />
+                         </div>
             </section>
         )
     } else {

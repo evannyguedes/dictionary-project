@@ -48,7 +48,7 @@ export default function Dictionary(){
 
     if (loaded){
     return (
-        <body>
+        
        <div className="Dictionary">
            <div className="Top">
                 <Link to="/" className="Back">
@@ -61,13 +61,15 @@ export default function Dictionary(){
                     </form>
                 </div>
             </div>
-            <Results results={results} />
             <Photos photos={photos} />
+            <card className="card">
+            <Results results={results} />
+            </card>
             <footer className="Evanny" style={{color:"black;"}}>
            Coded by Évanny Guedes Belarmino
        </footer>
        </div>
-       </body>
+       
     );
     } else {
         load();

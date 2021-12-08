@@ -1,7 +1,58 @@
-img {
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 250px;
-    height: 150px;
+.a-lot-photos{
+    position: relative;
+    width: 25%;
+    height: 25%;
+    transform-style: preserve-3d;
+    animation: animate 35s linear infinite;
+    margin: 0 auto;
     
+}
+
+@keyframes animate{
+    0% { transform: perspective(1500px) rotateY(0deg);}
+    100% { transform: perspective(1500px) rotateY(360deg);}
+
+}
+
+.first{
+    --i:1;
+}
+
+.second{
+    --i:2;
+}
+
+.third{
+    --i:3;
+}
+
+.fourth{
+    --i:4;
+}
+
+.fifth{
+    --i:5;
+}
+
+.sixth{
+    --i:6;
+}
+
+.seventh{
+    --i:7;
+}
+
+.eighth{
+    --i:8;
+}
+
+img {
+    position: absolute;
+    width:150px;
+    height: 150px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    object-fit: cover;
+    border-radius: 100px;
 }
