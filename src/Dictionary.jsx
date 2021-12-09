@@ -5,6 +5,8 @@ import Results from "./Results";
 import Rocket from "./media/rocket.png";
 import {Link} from "react-router-dom";
 import Photos from "./Photos";
+import Linkedin from "./media/linkedin.png";
+import Github from "./media/github.png";
 
 export default function Dictionary(){
     const [keyword, setKeyword] = useState("moon");
@@ -46,6 +48,12 @@ export default function Dictionary(){
         search();
     }
 
+    function goLinkedin(){
+        return window.open("https://www.linkedin.com/in/%C3%A9vanny-guedes-belarmino-971777123/", "_blank")}
+
+    function goGitHub(){
+        return window.open("https://github.com/evannyguedes/dictionary-project", "_blank")}
+
     if (loaded){
     return (
         
@@ -65,6 +73,20 @@ export default function Dictionary(){
             <Results results={results} />
             <footer className="Evanny" style={{color:"black;"}}>
            Coded by Évanny Guedes Belarmino
+           <input
+        type="image"
+        alt="Linkedin"
+        src={Linkedin}
+        className="sticker-lkd"
+        onClick={goLinkedin}
+        />
+         <input
+        type="image"
+        src={Github}
+        alt="Github"
+        className="sticker-git"
+        onClick={goGitHub}
+      />
        </footer>
        </div>
        

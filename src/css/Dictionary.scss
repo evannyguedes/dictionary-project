@@ -59,5 +59,26 @@ body {
     margin-top: auto;
     text-align: center;
     padding:20px 0;
+    font-family: 'Gluten', cursive;
     
+}
+
+.sticker-lkd{
+    filter: invert(100%);
+    width: 25px;
+    margin-left: 10px;
+}
+
+.sticker-lkd:hover{
+    width: 30px;
+}
+
+.sticker-git{
+    filter: invert(100%);
+    width: 25px;
+    margin-left: 10px;
+}
+
+.sticker-git:hover{
+    width: 30px;
 }
