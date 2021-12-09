@@ -1,14 +1,23 @@
 .Results{
-    margin: 20px 300px;
+    margin: 150px;
 }
 
 .Results section {
-    padding: 30px;
-    border-radius: 6px;
-    margin: 20px 0;
-    width: 30vw;
+        background-color:rgb(222, 220, 224);
+        padding: 30px;
+        border-radius: 50px;
+        margin: 20px 0;
+
 }
 
 .Results h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+.definition {
+    margin-top: 30px;
     font-weight: bold;
 }

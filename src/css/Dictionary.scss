@@ -2,12 +2,7 @@ body {
     background-image: url("../media/space.jpeg");
 }
 
-.card {
-    background-color: rgb(179, 178, 180);
-    width: 60vw;
-    margin: 250px auto 20px;
-    border-radius: 100px;
-}
+
 
 .Back{
     animation: none;
@@ -48,6 +43,7 @@ body {
 .search-engine{
     width: 30vw;
     float: left;
+    border-radius: 10px;
 }
 
 .rocket-buttom{

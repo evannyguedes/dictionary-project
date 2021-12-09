@@ -1,7 +1,7 @@
 .a-lot-photos{
     position: relative;
-    width: 25%;
-    height: 25%;
+    width: 15%;
+    height: 15%;
     transform-style: preserve-3d;
     animation: animate 35s linear infinite;
     margin: 0 auto;
@@ -48,11 +48,11 @@
 
 img {
     position: absolute;
-    width:150px;
-    height: 150px;
+    width:100px;
+    height: 100px;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
     object-fit: cover;
     border-radius: 100px;
 }

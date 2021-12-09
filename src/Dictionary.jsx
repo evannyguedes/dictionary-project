@@ -61,10 +61,8 @@ export default function Dictionary(){
                     </form>
                 </div>
             </div>
-            <Photos photos={photos} />
-            <card className="card">
+            <Photos photos={photos} />  
             <Results results={results} />
-            </card>
             <footer className="Evanny" style={{color:"black;"}}>
            Coded by Évanny Guedes Belarmino
        </footer>
