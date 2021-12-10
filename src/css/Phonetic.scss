@@ -3,22 +3,14 @@
     margin: 20px 0;
 }
 
-.Phonetic a {
-    border: 1px solid #ddd;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color:rgb(212, 144, 212);
-    transition: all 150ms ease-in-out;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 10px;
+.sound{
+    width: 30px;
+    padding-right: 5px;
 }
 
-.Phonetic a:hover {
- background-color: rgb(212, 144, 212);
- color: white;
-   
+.sound:hover{
+    width: 35px;
+    filter: invert(50%)
 }
 
 .text{

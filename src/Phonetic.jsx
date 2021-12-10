@@ -1,15 +1,47 @@
 import React from "react";
-import "./css/Phonetic.scss";
+import "./css/Phonetic.scss"; 
+import Sound from "./media/sound.png";
 
-export default function Phonetic(props){
-    return(
-        <div className="Phonetic">
-            <a href={props.phonetic.audio} target="_blank" rel="noopener noreferrer">
-                Listen
-            </a>
-            <span className="text">
-           /{props.phonetic.text}/
-           </span>
-        </div>
-    );
+export default class Phonetic extends React.Component {
+
+    state = {
+        play: false
+    }
+    audio = new Audio()
+      
+    componentDidMount() {
+        this.audio.addEventListener('ended', () => this.setState({ play: false }));
+    }
+        
+    componentWillUnmount() {
+        this.audio.removeEventListener('ended', () => this.setState({ play: false }));  
+    }
+      
+    togglePlay = () => {
+
+        this.setState({ play: !this.state.play }, () => {
+            this.state.play ? this.audio.play() : this.audio.play();
+        });
+    }
+      
+    render() {
+        this.audio = new Audio(this.props.phonetic.audio)
+        return (
+            <div className="Phonetic">
+                <input
+                    type="image"
+                    alt="Sound"
+                    src={Sound}
+                    className="sound"
+                    onClick={this.togglePlay}
+                 />
+                <span className="text">
+                    /{this.props.phonetic.text}/
+                </span>
+            </div>
+        );
+    }
 }
+  
+
+
