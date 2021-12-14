@@ -25,7 +25,7 @@ export default function Dictionary(){
     }
 
     function handlePexelsResponse(response){
-        if (Object.keys(response.data.photos).length  != 0)
+        if (Object.keys(response.data.photos).length  !== 0)
         {
             setPhotos(response.data.photos);console.log(response.data.photos)
         }
