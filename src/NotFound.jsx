@@ -4,6 +4,6 @@ import "./css/NotFound.scss";
 
 export default function NotFound(){
     return(
-      <img  src={NotFoundImg} className="NotFound"/> 
+      <img  src={NotFoundImg} className="NotFound" alt="Broken Planet"/> 
     )
 }
