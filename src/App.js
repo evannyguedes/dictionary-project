@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import Dictionary from "./Dictionary";
 
 class App extends Component {
+
   render(){
     return (
       <Router>

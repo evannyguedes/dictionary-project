@@ -1,27 +1,27 @@
  .body{
     background-color: black;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
   }
 
 
   .Universe{
-    position:absolute;
-    width: 100%;
-    left: 50%;
-    top: 50%;
     height: 100%;
+    left: 50%;
     object-fit: cover;
+    position:absolute;
+    top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     z-index: -1;
   }
   
-  .Header {   
-    min-height: 100vh;
-    display: flex;
+  .Header { 
+    align-items: center; 
+    display: flex; 
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    min-height: 100vh;
   }
 
   .Welcome {
@@ -31,13 +31,12 @@
   }
 
   .Word {
-    font-family: 'Bungee', cursive;
     animation: color 3s infinite linear;
+    font-family: 'Bungee', cursive;
+    font-size: calc(10px + 7vmin);
     text-shadow: 0 0 10px #000a;
     transition: all 0.5s;
-    font-size: calc(10px + 7vmin);
-
-  
+   
     @keyframes color {
       @for $c from 0 through 10 {
         #{$c * 10%} { color: hsl(36 * $c, 75%, 75%); }
@@ -52,10 +51,10 @@
 
   .Go:hover{
     animation:color 3s infinite linear;
+    font-size: 20px;
     text-shadow: 0 0 10px #000a;
     transition: all 0.5s;
-    font-size: 20px;
-
+   
     @keyframes color {
       @for $c from 0 through 10 {
         #{$c * 10%} { color: hsl(36 * $c, 75%, 75%); }

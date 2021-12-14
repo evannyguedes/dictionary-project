@@ -4,22 +4,32 @@ import axios from "axios";
 import Results from "./Results";
 import Rocket from "./media/rocket.png";
 import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import Photos from "./Photos";
 import Linkedin from "./media/linkedin.png";
 import Github from "./media/github.png";
 
 export default function Dictionary(){
-    const [keyword, setKeyword] = useState("moon");
+    const location = useLocation();
+    const{word}= location.state
+    const [keyword, setKeyword] = useState(word);
     const [results, setResults] = useState(null);
     const [loaded, setLoaded] = useState(false);
     const [photos, setPhotos] = useState(null);
 
+    
+
     function handleDictionaryResponse(response){
+
     setResults(response.data[0]);  
     }
 
     function handlePexelsResponse(response){
-        setPhotos(response.data.photos);  
+        if (Object.keys(response.data.photos).length  != 0)
+        {
+            setPhotos(response.data.photos);console.log(response.data.photos)
+        }
+          
         }
     
     function search(){
@@ -40,7 +50,7 @@ export default function Dictionary(){
     }
 
     function handleKeywordChange(event){
-    setKeyword(event.target.value)
+        setKeyword(event.target.value)
     }
 
     function load(){
@@ -70,24 +80,24 @@ export default function Dictionary(){
                 </div>
             </div>
             <Photos photos={photos} />  
-            <Results results={results} />
+            <Results results={results}/>
             <footer className="Evanny" style={{color:"black;"}}>
-           Coded by Évanny Guedes Belarmino
-           <input
-        type="image"
-        alt="Linkedin"
-        src={Linkedin}
-        className="sticker-lkd"
-        onClick={goLinkedin}
-        />
-         <input
-        type="image"
-        src={Github}
-        alt="Github"
-        className="sticker-git"
-        onClick={goGitHub}
-      />
-       </footer>
+                Coded by Évanny Guedes Belarmino
+                <input
+                    type="image"
+                    alt="Linkedin"
+                    src={Linkedin}
+                    className="sticker-lkd"
+                    onClick={goLinkedin}
+                />
+                <input
+                    type="image"
+                    src={Github}
+                    alt="Github"
+                    className="sticker-git"
+                    onClick={goGitHub}
+                />
+            </footer>
        </div>
        
     );

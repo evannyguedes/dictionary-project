@@ -5,15 +5,18 @@
 }
 
 .Synonyms li {
-    display: inline-block;
-    padding: 5px 15px;
-    font-size: 13px;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    text-align: center;
-    color:black;
     background-color:#bcb5fd;
-    
-    
+    border-radius: 5px;
+    color:black;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 5px 15px;
+    text-align: center; 
+}
+
+button{
+    background-color:#bcb5fd;
+    border:none;
 }

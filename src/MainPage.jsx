@@ -13,9 +13,9 @@ export default function MainPage() {
         <header className="Header">
           <h3 className="Welcome">Welcome to the</h3>
           <h1 className="Word">Word Universe</h1>
-          <Link to="/dictionary" className="Go">
-          <input type="image" alt="rocket" src={Rocket} className="Rocket"/>
-          <br/>
+          <Link to={{pathname:"/dictionary", state:{word:"moon"}}} className="Go">
+            <input type="image" alt="rocket" src={Rocket} className="Rocket"/>
+            <br/>
             Let's Go!
             </Link>  
         </header>
