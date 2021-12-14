@@ -11,9 +11,7 @@ export default function Synonyms(props){
                 {props.synonyms.map(function (synonym, index) {  
                     return (
                         <li key={index} >
-                            <button>
-                                {synonym}
-                            </button>
+                            {synonym}
                          </li>
                     )            
                 })}
